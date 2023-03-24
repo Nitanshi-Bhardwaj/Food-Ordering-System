@@ -1,0 +1,16 @@
+import mysql.connector as sql
+conn=sql.connect(host="localhost", user="root", passwd="12345", database="food")
+if conn.is_connected():
+    print("sucessfully connected")
+c1= conn.cursor()
+c1.execute('create table myc(cust_name varchar(30),account_no int(50))')
+print('table created')
+
+
+import mysql.connector as sql
+conn=sql.connect(host="localhost", user="root", passwd="12345", database="food")
+if conn.is_connected():
+    print("sucessfully connected")
+c1= conn.cursor()
+c1.execute('create table sales(f_name varchar(30),price float(10),address varchar(100))')
+print('table created')
